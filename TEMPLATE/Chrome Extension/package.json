@@ -1,0 +1,21 @@
+{
+  "name": "chrome_extension",
+  "version": "1.0.0",
+  "description": "This Chrome extension uses a TensorFlow.js model to classify Gmail emails as important or not, and highlights important emails with a light red background.",
+  "scripts": {
+  "build": "parcel build content.js --dist-dir dist --no-source-maps",
+  "dev": "parcel watch content.js --dist-dir dist",
+  "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.16.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0"
+  }
+}

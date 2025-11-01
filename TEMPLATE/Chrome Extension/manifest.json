@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Email Classifier",
+  "version": "1.0",
+  "description": "Classifies Gmail emails using a TensorFlow.js model and highlights important ones.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": [ "dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["model/*"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}
